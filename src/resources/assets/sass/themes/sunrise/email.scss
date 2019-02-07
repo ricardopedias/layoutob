@@ -1,0 +1,15 @@
+
+// --------------------------------------------------------------------------
+// admin.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contem o tema do painel administrativo
+// --------------------------------------------------------------------------
+
+// Funções e Mixins do projeto
+@import "../../elements/functions";
+
+// As configurações básicas do tema
+@import "./theme";
+
+// Componentes do tema
+@import "../../elements/components/email/index";

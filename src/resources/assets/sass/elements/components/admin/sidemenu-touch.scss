@@ -1,0 +1,31 @@
+
+// --------------------------------------------------------------------------
+// admin/sidemenu-touch.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu lateral do painel
+// --------------------------------------------------------------------------
+
+    .sidemenu-touch {
+        background: transparent;
+        bottom: auto;
+        display: flex;
+        font-size: .9em;
+        height: 100vh;
+        left: 0px; // escondido à esquerda
+        padding: 0;
+        padding-top: $admin-sidemenu-height + $admin-topmenu-border-bottom-size;
+        position: fixed;
+        right: auto;
+        top: 0;
+        width: 20px;
+        z-index: $zindex-sidemenu !important;
+
+        // revela o menu
+        @include media-breakpoint-up(lg) {
+            left: 0; // revela o menu
+        }
+        &.expanded {
+            left: 0; // revela o menu
+        }
+
+    }

@@ -1,0 +1,11 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+// Pageloader
+$admin-pageloader-animation-delay: 400ms;
+$admin-pageloader-bg:              $gray-200 !default;
+$admin-pageloader-color:           $green !default;
+$admin-pageloader-height:          3px !default;

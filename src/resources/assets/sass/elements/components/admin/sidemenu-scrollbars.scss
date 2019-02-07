@@ -1,0 +1,28 @@
+
+// --------------------------------------------------------------------------
+// admin/sidemenu-scrollbars.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a personalizalção das barreas de rolagem do menu lateral
+// --------------------------------------------------------------------------
+
+    .sidemenu {
+
+        // Scrollbar
+        &::-webkit-scrollbar {
+            width: $admin-sidemenu-scroll-width;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $admin-sidemenu-scroll-track;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $admin-sidemenu-scroll-thumb;
+            border-radius: $admin-sidemenu-scroll-thumb-radius;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: $admin-sidemenu-scroll-thumb-hover;
+        }
+
+    }

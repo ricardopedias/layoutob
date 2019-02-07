@@ -1,0 +1,67 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+body.pageloader {
+
+    // Para ocultar a barra de rolagem
+    overflow: hidden;
+}
+
+.pageloader {
+
+    // Para envolver o painel inteiro
+    &.panel-backdrop {
+        background: rgba(255,255,255,0);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+        z-index: $zindex-pageloader-backdrop !important;
+
+        &.show-loader {
+            display: block;
+        }
+    }
+}
+
+.pageloader-container {
+    display: block;
+    position: fixed;
+    top: $admin-topmenu-height + $admin-topmenu-border-bottom-size;
+    width: 100%;
+    background: $admin-pageloader-bg;
+    height: $admin-pageloader-height;
+    opacity: 0;
+    z-index: $zindex-pageloader !important;
+    transition: opacity $admin-pageloader-animation-delay;
+
+    & .pageloader-bar {
+        background: $admin-pageloader-color;
+        height: $admin-pageloader-height;
+        width: 1%;
+        transition: width $admin-pageloader-animation-delay;
+
+        &.w-10 { width: 10%; }
+        &.w-20 { width: 20%; }
+        &.w-30 { width: 30%; }
+        &.w-40 { width: 40%; }
+        &.w-50 { width: 50%; }
+        &.w-60 { width: 60%; }
+        &.w-70 { width: 70%; }
+        &.w-80 { width: 80%; }
+        &.w-90 { width: 90%; }
+        &.w-100 { width: 100%; }
+    }
+
+    &.show-loader {
+        opacity: 1;
+    }
+}

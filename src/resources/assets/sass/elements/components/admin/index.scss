@@ -1,0 +1,23 @@
+
+// --------------------------------------------------------------------------
+// admin/index.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura básica do painel administrativo
+// --------------------------------------------------------------------------
+
+@import "topmenu";
+@import "sidemenu";
+@import "sidemenu-submenu";
+@import "sidemenu-minimize";
+@import "sidemenu-scrollbars";
+@import "sidemenu-touch";
+@import "toppanel";
+@import "bottompanel";
+
+@import "layout";
+@import "page-header";
+@import "page-grid";
+@import "page-form";
+
+@import "mainloader";
+@import "pageloader";

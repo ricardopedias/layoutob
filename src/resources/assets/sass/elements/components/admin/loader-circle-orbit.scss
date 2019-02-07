@@ -1,0 +1,58 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+.mainloader {
+
+    & .loader-circle-orbit {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1005 !important;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        margin-left: -25px;
+        text-align: center;
+        animation: loaderCircleOrbitRotate 2.0s infinite linear;
+
+        & .orbit-item {
+            width: 60%;
+            height: 60%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            background-color: $admin-mainloader-color-one;
+            border-radius: 100%;
+            animation: loaderCircleOrbitBounce 2.0s infinite ease-in-out;
+        }
+
+        & .orbit-item2 {
+            background-color: $admin-mainloader-color-two;
+            top: auto;
+            bottom: 0;
+            animation-delay: -1.0s;
+        }
+    }
+}
+
+@-webkit-keyframes loaderCircleOrbitRotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes loaderCircleOrbitRotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes loaderCircleOrbitBounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes loaderCircleOrbitBounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

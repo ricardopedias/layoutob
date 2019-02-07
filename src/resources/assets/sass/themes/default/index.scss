@@ -1,0 +1,52 @@
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.1.3) - Tema
+ * Este arquivo contem a personalização das cores do bootstrap.
+  * --------------------------------------------------------------------------
+ * As variáveis devem seguir a formula `$component-state-property-size` para
+ * manter a consistência de nomeação.
+ * Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+ * --------------------------------------------------------------------------
+ */
+
+// @import "~bootstrap/scss/variables";
+
+// Cores Globais
+@import "./components/colors";
+
+@import "./components/configurations";
+
+// Tamanhos e espaços
+@import "./components/sizes";
+
+@import "./components/links";
+@import "./components/paragraphs";
+@import "./components/grid";
+@import "./components/components";
+@import "./components/fonts";
+@import "./components/tables";
+@import "./components/buttons-forms";
+@import "./components/buttons";
+@import "./components/forms";
+@import "./components/dropdown";
+@import "./components/zindex";
+@import "./components/navs";
+@import "./components/navbar";
+@import "./components/pagination";
+@import "./components/jumbotron";
+@import "./components/cards";
+@import "./components/tooltips";
+@import "./components/popovers";
+@import "./components/badges";
+@import "./components/modals";
+@import "./components/alerts";
+@import "./components/progress";
+@import "./components/list-groups";
+@import "./components/thumbnails";
+@import "./components/figures";
+@import "./components/breadcrumbs";
+@import "./components/carousel";
+@import "./components/close";
+@import "./components/code";
+@import "./components/printing";

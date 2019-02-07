@@ -1,0 +1,36 @@
+
+// --------------------------------------------------------------------------
+// admin/bottompanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+    .bottompanel {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background-color: $admin-bottompanel-bg;
+        height: $admin-bottompanel-height;
+        line-height: $admin-bottompanel-height;
+        border-top: $admin-bottompanel-border-top-size solid $admin-bottompanel-border-top-color;
+        padding-left: $admin-bottompanel-height/3;
+        padding-right: $admin-bottompanel-height/3;
+        font-size: 14px;
+        color: $admin-bottompanel-color;
+        z-index: $zindex-content-layer;
+    }
+
+    body.sidemenu-minimized .bottompanel {
+        @include media-breakpoint-up(lg) {
+            padding-left: $admin-sidemenu-minimize-width + ($admin-bottompanel-height/3);
+            margin-left: -$admin-sidemenu-minimize-width;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+
+        body:not(.sidemenu-minimized) .bottompanel {
+            padding-left: $admin-sidemenu-width + ($admin-bottompanel-height/3);
+            margin-left: -$admin-sidemenu-width;
+        }
+    }

@@ -1,0 +1,68 @@
+
+// --------------------------------------------------------------------------
+// sortable-grid/index.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Aparência dos grids de dados do sortable-grid
+// --------------------------------------------------------------------------
+
+body {
+
+    & .sg-sortable-table {
+
+        background-color: #fff !important;
+
+        & thead {
+
+            background-color: $table-header-bg;
+
+            & th {
+
+                position: relative;
+                border-top-color: $table-header-border;
+                border-left-color: $table-header-border;
+                border-right-color: $table-header-border;
+                border-bottom-color: $table-header-border;
+                border-bottom-width: 1px;
+                color: $table-header-text;
+
+                &:first-child {
+                    border-left-color: lighten($table-header-border, 2%);
+                }
+
+                &:last-child {
+                    border-right-color: lighten($table-header-border, 2%);
+                }
+            }
+
+        }
+
+        & tbody {
+
+            & tr {
+
+                & td {
+
+                    vertical-align: middle;
+                    color: lighten($table-header-text, 20%);
+
+                    &:first-child {
+                        border-left-color: $table-header-bg;
+                    }
+
+                    &:last-child {
+                        border-right-color: $table-header-bg;
+                    }
+                }
+
+                &:last-child {
+
+                    & td {
+                        border-bottom-color: $table-header-border;
+                        border-bottom-width: 1px;
+                    }
+                }
+            }
+
+        }
+    }
+}

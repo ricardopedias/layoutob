@@ -1,0 +1,52 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+.mainloader {
+
+    & .loader-circle-pulse {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1005 !important;
+        margin: 0 auto;
+        margin-left: -25px;
+
+        & .pulse-item {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: $admin-mainloader-color-one;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: loaderCirclePulseRun 2.0s infinite ease-in-out;
+        }
+
+        & .pulse-item2 {
+            animation-delay: -1.0s;
+        }
+    }
+}
+
+@-webkit-keyframes loaderCirclePulseRun {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes loaderCirclePulseRun {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  }
+  50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

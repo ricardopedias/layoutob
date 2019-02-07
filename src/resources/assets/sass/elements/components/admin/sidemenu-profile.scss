@@ -1,0 +1,29 @@
+
+// --------------------------------------------------------------------------
+// admin/profile.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém o cloco de perfil do usuário para o menu lateral
+// --------------------------------------------------------------------------
+
+    .sidemenu {
+
+        & .sidemenu-profile {
+
+            padding: 10px 0;
+            position: relative;
+            text-align: center;
+
+            & img {
+                border-radius: 50%;
+                width: 50%;
+                margin-bottom: 10px;
+                display: none;
+            }
+
+            & a {
+                border: 0px solid #fff;
+            }
+
+        }
+
+    }

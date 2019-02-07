@@ -1,0 +1,39 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+//----------------------------------------------------------------------------------------------------------------------
+// Submenu Item
+//----------------------------------------------------------------------------------------------------------------------
+$admin-sidemenu-sub-height:               40px !default;
+$admin-sidemenu-sub-indent:               20px !default;
+$admin-sidemenu-sub-border-size:          1px;
+// Comum
+$admin-sidemenu-sub-color:                $admin-sidemenu-color !default;
+$admin-sidemenu-sub-bg:                   $admin-sidemenu-bg-active !default;
+$admin-sidemenu-sub-border-color:         lighten($admin-sidemenu-sub-bg, 2%) !default;
+$admin-sidemenu-sub-icon-width:           $admin-sidemenu-sub-height - $admin-sidemenu-sub-height/4 !default;
+$admin-sidemenu-sub-icon-color:           $admin-sidemenu-sub-color !default;
+$admin-sidemenu-sub-icon-bg:              transparent !default;
+// Hover
+$admin-sidemenu-sub-color-hover:          #fff !default;
+$admin-sidemenu-sub-bg-hover:             darken($admin-sidemenu-sub-bg, 3%) !default;
+$admin-sidemenu-sub-border-color-hover:   $admin-sidemenu-sub-border-color !default;
+$admin-sidemenu-sub-icon-color-hover:     $admin-sidemenu-sub-color-hover !default;
+$admin-sidemenu-sub-icon-bg-hover:        $admin-sidemenu-sub-icon-bg !default;
+// Ativo
+$admin-sidemenu-sub-color-active:             $admin-sidemenu-sub-color-hover !default;
+$admin-sidemenu-sub-bg-active:                $admin-sidemenu-sub-bg-hover !default;
+$admin-sidemenu-sub-border-color-active:      $admin-sidemenu-sub-border-color-hover !default;
+$admin-sidemenu-sub-icon-color-active:        $admin-sidemenu-sub-icon-color-hover !default;
+$admin-sidemenu-sub-icon-bg-active:           $admin-sidemenu-sub-icon-bg-hover !default;
+$admin-sidemenu-sub-border-left-size-active:  5px !default;
+$admin-sidemenu-sub-border-left-color-active: $accent !default;
+// Desligado
+$admin-sidemenu-sub-color-disabled:         rgba($admin-sidemenu-sub-color, .5) !default;
+$admin-sidemenu-sub-bg-disabled:            rgba($admin-sidemenu-sub-bg, .5) !default;
+$admin-sidemenu-sub-border-color-disabled:  rgba($admin-sidemenu-sub-border-color, .5) !default;
+$admin-sidemenu-sub-icon-color-disabled:    rgba($admin-sidemenu-sub-icon-color, .5) !default;
+$admin-sidemenu-sub-icon-bg-disabled:       transparent !default;

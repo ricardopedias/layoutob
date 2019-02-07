@@ -1,0 +1,92 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+.mainloader {
+
+    & .loader-cube {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -25px;
+        transform: rotateZ(45deg);
+        z-index: 1005 !important;
+
+        & .cube-item {
+            float: left;
+            width: 50%;
+            height: 50%;
+            position: relative;
+            transform: scale(1.1);
+        }
+        & .cube-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $admin-mainloader-color-one;
+            animation: loaderCubeAngle 2.4s infinite linear both;
+            transform-origin: 100% 100%;
+        }
+
+        & .cube-item2 {
+            transform: scale(1.1) rotateZ(90deg);
+        }
+
+        & .cube-item3 {
+              transform: scale(1.1) rotateZ(180deg);
+        }
+        & .cube-item4 {
+              transform: scale(1.1) rotateZ(270deg);
+        }
+        & .cube-item2:before {
+            background-color: $admin-mainloader-color-two;
+            animation-delay: 0.3s;
+        }
+        & .cube-item3:before {
+            background-color: $admin-mainloader-color-three;
+            animation-delay: 0.6s;
+        }
+        & .cube-item4:before {
+            background-color: $admin-mainloader-color-four;
+            animation-delay: 0.9s;
+        }
+    }
+}
+
+@-webkit-keyframes loaderCubeAngle {
+    0%, 10% {
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%, 75% {
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%, 100% {
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes loaderCubeAngle {
+    0%, 10% {
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%, 75% {
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%, 100% {
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}

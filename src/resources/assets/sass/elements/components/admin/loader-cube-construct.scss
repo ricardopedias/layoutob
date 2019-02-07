@@ -1,0 +1,84 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+.mainloader {
+
+    & .loader-cube-construct {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1005 !important;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        margin-left: -20px;
+
+        & .cube-item {
+            width: 33%;
+            height: 33%;
+            background-color: $admin-mainloader-color-one;
+            float: left;
+            animation: loaderCubeConstructRun 1.3s infinite ease-in-out;
+        }
+
+        & .cube-item1 {
+            animation-delay: 0.2s;
+        }
+
+        & .cube-item2 {
+            animation-delay: 0.3s;
+        }
+
+        & .cube-item3 {
+            animation-delay: 0.4s;
+        }
+
+        & .cube-item4 {
+            animation-delay: 0.1s;
+        }
+
+        & .cube-item5 {
+            animation-delay: 0.2s;
+        }
+
+        & .cube-item6 {
+            animation-delay: 0.3s;
+        }
+
+        & .cube-item7 {
+            animation-delay: 0s;
+        }
+
+        & .cube-item8 {
+            animation-delay: 0.1s;
+        }
+
+        & .cube-item9 {
+            animation-delay: 0.2s;
+        }
+    }
+}
+
+@-webkit-keyframes loaderCubeConstructRun {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes loaderCubeConstructRun {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}

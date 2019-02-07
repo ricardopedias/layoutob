@@ -1,0 +1,366 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+.page-grid {
+
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    position: relative;
+
+    // Área de controle superior
+    & .page-grid-control {
+        min-height: 50px;
+
+        .page-grid-search {
+            width: 200px;
+        }
+
+        @media screen and (max-width: 500px) {
+            .page-grid-search {
+                width: 100px;
+            }
+        }
+
+    }
+
+    // Para rolar a grade
+    & .page-grid-wrapper {
+        height: 100%;
+        overflow-x:auto;
+        overflow-y:hidden;
+        width: 100%;
+    }
+
+    & table,
+    & table th,
+    & table td {
+        border-collapse: collapse;
+        border-spacing: 0;
+        padding: 0px;
+        white-space: nowrap;
+    }
+
+    & table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+
+        // Cabeçalhos
+        & thead {
+
+            & th {
+                background: $gray-200;
+                border: 1px solid $gray-300;
+                border-left: none;
+                border-right: none;
+                box-sizing: content-box;
+                color: $gray-600;
+                font-size: .8rem;
+                height: 28px;
+                line-height: 28px;
+
+                & span {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    &:focus,
+                    &:active,
+                    &::-moz-selection,
+                    &::-webkit-selection,
+                    &::selection {
+                        color: $gray-600;
+                        background: transparent;
+                    }
+                }
+
+                &:hover {
+                    background: darken($gray-200, 5%);
+                }
+
+            }
+
+            // Cabeçalhos com ordenação
+            & th.page-grid-orderable {
+
+                & span {
+                    padding-left: 20px; // largura das cetas
+                }
+
+                cursor: pointer;
+                position: relative;
+
+                & i {
+                    color: $gray-500; // icones direcionais sem destaque
+                    display: block;
+                    font-family: 'Font Awesome 5 Free';
+                    font-size: 8px;
+                    font-style: normal;
+                    height: 30px;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 6px;
+                    width: 10px;
+
+                    &::before { // desc
+                        content: "\f077";
+                        display: block;
+                        height: 10px;
+                        margin-top: -5px;
+                    }
+
+                    &::after { // asc
+                        content: "\f078";
+                        display: block;
+                        height: 10px;
+                    }
+                }
+
+                &.order-asc i::after { color: #000; } // destaca 'asc'
+                &.order-desc i::before { color: #000; } // destaca 'desc'
+
+                &:hover {
+
+                    color: $gray-900;
+
+                    // se não houver ordenação, destaca 'desc'
+                    // & i::before { color: $gray-900; }
+
+                    // &.order-asc {
+                    //     // ordenação asc, proximo será 'none'
+                    //     & i::before { color: $gray-500; } // desc
+                    //     & i::after { color: $gray-500; } // asc
+                    // }
+                    //
+                    // &.order-desc {
+                    //     // ordenação desc, proximo será 'asc'
+                    //     & i::before { color: $gray-500; } // desc
+                    //     & i::after { color: $gray-900; } // asc
+                    // }
+                }
+            }
+
+            & th.page-grid-actions {
+                z-index: 2;
+            }
+        }
+
+        // Células de informação
+        & td {
+            box-sizing: content-box;
+            color: $gray-700;
+            height: 50px;
+            line-height: 50px;
+            white-space: nowrap;
+            //z-index: 1;
+
+            & span {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            &.page-grid-orderable span {
+                padding-left: 15px; // largura das cetas
+            }
+
+            & + td {
+                // border-left: 1px solid #f5f5f5;
+            }
+
+            & th.page-grid-actions {
+                z-index: 1;
+            }
+
+            // & .dropdown-menu {
+            //     z-index: 500;
+            // }
+        }
+
+        & tr + tr > td {
+            border-top: 1px solid #f5f5f5;
+            // margin-top: -1px;
+        }
+
+        & .page-grid-check {
+
+            vertical-align: middle;
+            width: 50px;
+
+            & .custom-control {
+                margin-top: -12px;
+                top: 50%;
+            }
+
+            & .custom-control-label {
+                margin-left: 15px;
+                position: absolute;
+                top: 0px;
+            }
+        }
+
+        // Colunas fixas
+        & .page-grid-id {
+            width: 50px;
+        }
+
+        & .page-grid-main {
+
+            border-right: 1px solid #fff;
+
+            // sombra do começo
+            &.scroll-shadow::after {
+                box-shadow: 15px 0 15px -15px inset rgba(0,0,0,0.1);
+                content: " ";
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: -15px;
+                width: 15px;
+            }
+        }
+
+        & .page-grid-actions {
+
+            border-left: 1px solid #fff;
+            position: absolute;
+            right: 0;
+            text-align: right;
+
+            // sombra do fim
+            &.scroll-shadow::before {
+                box-shadow: -15px 0 15px -15px inset rgba(0,0,0,0.1);
+                content: " ";
+                height: 100%;
+                top: 0;
+                left: -15px;
+                position: absolute;
+                width: 15px;
+            }
+
+            & > div {
+                display: inline-block;
+                text-align: center;
+                width: 50px;
+
+                &.page-grid-actions-mobile {
+                    display: none;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                    &.page-grid-actions-mobile {
+                        display: inline-block;
+                    }
+                }
+
+                & .dropdown-toggle {
+
+                    background: transparent;
+
+                    &:hover,
+                    &:active,
+                    &.active,
+                    &:focus {
+                        background: $gray-200;
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+
+        // Ajuste necessário por causa da posição absoluta das primeiras colunas
+        & .page-grid-check,
+        & .page-grid-id,
+        & .page-grid-main,
+        & .page-grid-actions {
+            // z-index: 1 !important;
+            margin-top: -0.5px; // a maioria dos navegadores deve ser -0.5px, o firefox deve ser -1.0px
+        }
+
+        & .page-grid-actions-mobile {
+            background: #fff;
+        }
+
+    }
+
+    // Contagem de ações
+    &.page-grid-actions-one {
+        padding-right: 50px;
+        & .page-grid-control { margin-right: -50px; }
+        & .page-grid-actions { width: 50px; }
+    }
+
+    &.page-grid-actions-two {
+        padding-right: 110px;
+        & .page-grid-control { margin-right: -110px; }
+        & .page-grid-actions { width: 110px; }
+    }
+
+    &.page-grid-actions-three {
+        padding-right: 160px;
+        & .page-grid-control { margin-right: -160px; }
+        & .page-grid-actions { width: 160px; }
+    }
+
+    &.page-grid-actions-four {
+        padding-right: 210px;
+        & .page-grid-control { margin-right: -210px; }
+        & .page-grid-actions { width: 210px; }
+    }
+
+    @include media-breakpoint-down(sm) {
+
+        &.page-grid-actions-one,
+        &.page-grid-actions-two,
+        &.page-grid-actions-three {
+            padding-right: 50px;
+            & .page-grid-control { margin-right: -50px; }
+            & .page-grid-actions { width: 50px; }
+        }
+    }
+
+    & .page-grid-header {
+        background: #fff;
+    }
+
+    & .page-grid-row {
+
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        line-height: 40px;
+        margin-left: 0;
+        margin-right: 0;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        & .page-grid-col {
+            border-right: 1px solid rgba(0, 0, 0, 0.125);
+            text-align: left;
+
+            &.page-grid-actions {
+                border-left: 1px solid rgba(0, 0, 0, 0.125);
+            }
+
+            &:last-child,
+            &.mr-auto {
+                border-right: 0;
+            }
+
+            & span {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+@import "page-grid-pagination";

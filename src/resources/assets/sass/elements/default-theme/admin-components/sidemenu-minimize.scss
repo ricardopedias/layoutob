@@ -1,0 +1,13 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+$admin-sidemenu-minimize-icon-width:     $admin-sidemenu-height !default;
+$admin-sidemenu-minimize-bg:             transparent !default;
+$admin-sidemenu-minimize-color:          $admin-topmenu-bg !default;
+$admin-sidemenu-minimize-bg-hover:       transparent !default;
+$admin-sidemenu-minimize-color-hover:    lighten($admin-sidemenu-minimize-color, 10%) !default;
+$admin-sidemenu-minimize-width:          $admin-toppanel-height !default;
+$admin-sidemenu-minimize-height:         $admin-toppanel-height !default;

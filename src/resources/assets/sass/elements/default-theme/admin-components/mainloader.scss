@@ -1,0 +1,14 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+$admin-mainloader-animation-delay: 400ms;
+$admin-mainloader-bg         : rgba($gray-800, .5) !default;
+$admin-mainloader-color      : rgba($gray-200, .8) !default;
+$admin-mainloader-color-one  : $admin-mainloader-color !default;
+$admin-mainloader-color-two  : $admin-mainloader-color !default;
+$admin-mainloader-color-three: $admin-mainloader-color !default;
+$admin-mainloader-color-four : $admin-mainloader-color !default;
+$admin-mainloader-color-five : $admin-mainloader-color !default;

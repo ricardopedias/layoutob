@@ -1,0 +1,44 @@
+
+// --------------------------------------------------------------------------
+// admin/layout.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura de layout
+// --------------------------------------------------------------------------
+
+html, body {
+    background-color: $admin-bg;
+    height:100% !important;
+    min-height:100% !important;
+    width: 100% !important;
+}
+
+body.admin {
+
+    main {
+        // Corrige o suporte a tag main no internet explorer
+        padding-top: $admin-topmenu-height + $admin-topmenu-border-bottom-size + $admin-toppanel-height;
+        padding-bottom: $admin-bottompanel-height + $admin-bottompanel-border-top-size;
+        // width: calc(100% - $admin-sidemenu-width);
+    }
+
+}
+
+main {
+    // Corrige o suporte a tag main no internet explorer
+    display: block;
+    height: 100%;
+
+    & .page-content {
+        display: block;
+        z-index: $zindex-content;
+        padding-bottom: $admin-bottompanel-height + $admin-bottompanel-border-top-size + 20px !important;
+    }
+}
+
+body {
+
+    & * {
+        outline: none;
+    }
+
+}

@@ -1,0 +1,14 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+// Configuração do componente jquery-confirm
+@import "./jquery-confirm";
+
+// Configuração do componente datepicker
+@import "./datepicker";
+
+// Configuração do componente sortable-grid
+@import "./sortable-grid";

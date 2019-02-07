@@ -1,0 +1,124 @@
+
+// --------------------------------------------------------------------------
+// admin/sidemenu-minimize.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu lateraç no estado minimizado
+// --------------------------------------------------------------------------
+
+    // Quando a barra lateral está minimizada
+    // o conteúdo deve ser movido para se adequar
+    // ao novo espaço reduzido da barra lateral
+    body.sidemenu-minimized {
+
+        & main {
+
+            @include media-breakpoint-up(lg) {
+                // margem reduzida
+                margin-left: $admin-sidemenu-minimize-width;
+            }
+        }
+    }
+
+    // O botão de minimizar a barra lateral
+    .sidemenu-minimize {
+
+        background: $admin-sidemenu-minimize-bg;
+        cursor: pointer;
+        display: block;
+        height: $admin-sidemenu-minimize-height;
+        position: fixed;
+        text-align: center;
+        top: $admin-topmenu-height + $admin-topmenu-border-bottom-size;
+        transition: all 200ms, opacity 800ms;
+        width: $admin-sidemenu-minimize-width;
+        left: 0;
+        opacity: 0;
+        line-height: $admin-sidemenu-minimize-height;
+        z-index: 1003 !important;
+
+        &.expanded {
+            //left: $admin-sidemenu-width;
+            //opacity: 1;
+            opacity: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            left: $admin-sidemenu-width;
+            opacity: 1;
+
+            &.expanded {
+                left: $admin-sidemenu-width;
+                opacity: 1;
+            }
+        }
+
+
+        // Quando a barra lateral está minimizada
+        // o botão de minimizar deve ser movido para se adequar
+        // ao novo espaço reduzido da barra lateral
+        &.minimized {
+            transform: rotate(180deg);
+            left: $admin-sidemenu-minimize-icon-width;
+        }
+
+        &::after {
+            color: $admin-sidemenu-minimize-color;
+            content: "\f104";
+            font-family: 'Font Awesome 5 Free';
+            font-style: normal;
+            font-size: 32px;
+            font-weight: 900;
+            transition: all 500ms;
+        }
+
+        &:hover {
+            background: $admin-sidemenu-minimize-bg-hover;
+        }
+
+        &:hover::after {
+            color: $admin-sidemenu-minimize-color-hover;
+        }
+    }
+
+    // A barra lateral é reduzida para o
+    // tamanho dos ícones à esquerda
+    .sidemenu {
+
+        &.minimized {
+
+            width: $admin-sidemenu-minimize-icon-width;
+
+            & a {
+                //height: $admin-sidemenu-height;
+                width: $admin-sidemenu-width;
+
+                & span {
+                    width: $admin-sidemenu-minimize-icon-width;
+                    //margin-right: 50px;
+                    //height: $admin-sidemenu-height;
+                }
+
+                & strong {
+                    //display:none; //height: $admin-sidemenu-height;
+                    opacity: 0;
+                }
+
+                &.has-sub::after {
+                    display: none;
+                }
+
+                & .no-icon {
+                    display: inline-block;
+                    opacity: 1;
+                    width: $admin-sidemenu-minimize-icon-width;
+                }
+            }
+
+            & .sidemenu-sub {
+                height: 0px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    //

@@ -1,0 +1,34 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+.page-header {
+
+    & .page-actions {
+
+        & a strong {
+            font-weight: normal;
+        }
+
+    }
+
+    & .page-actions-mobile button.dropdown-toggle {
+
+        background: transparent;
+
+        &:hover,
+        &:active,
+        &.active,
+        &:focus {
+            background: $gray-200;
+        }
+
+        &::after {
+            display: none;
+        }
+
+    }
+}

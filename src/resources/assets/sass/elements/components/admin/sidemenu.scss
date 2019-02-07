@@ -1,0 +1,180 @@
+
+// --------------------------------------------------------------------------
+// admin/sidemenu.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu lateral do painel
+// --------------------------------------------------------------------------
+
+    body.admin {
+
+        & main {
+            margin-left: 0px;
+            transition: all 500ms cubic-bezier(0.2, 1, 0.22, 1);
+
+            // menu revelado
+            @include media-breakpoint-up(lg) {
+                margin-left: $admin-sidemenu-width;
+            }
+        }
+    }
+
+    .sidemenu {
+        animation-delay: 500ms;
+        background: $admin-sidemenu-bg;
+        border-radius: 0;
+        bottom: auto;
+        display: flex;
+        flex-direction: column;
+        font-size: .9em;
+        height: 100vh;
+        justify-content: flex-start;
+        left: -$admin-sidemenu-width; // escondido à esquerda
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0;
+        padding-top: $admin-sidemenu-height + $admin-topmenu-border-bottom-size;
+        position: fixed;
+        right: auto;
+        top: 0;
+        transition: all 500ms cubic-bezier(0.2, 1, 0.22, 1);
+        width: $admin-sidemenu-width;
+        z-index: $zindex-sidemenu !important;
+
+        // revela o menu
+        @include media-breakpoint-up(lg) {
+            left: 0; // revela o menu
+        }
+        &.expanded {
+            left: 0; // revela o menu
+        }
+
+        & a {
+            background-color: $admin-sidemenu-bg;
+            border: $admin-sidemenu-border-size solid $admin-sidemenu-border-color;
+            box-sizing: border-box;
+            color: $admin-sidemenu-color;
+            display: block;
+            line-height: $admin-sidemenu-height;
+            margin-bottom: -1px;
+            overflow-x: none;
+            padding: 0;
+            position: relative;
+            text-align: inherit;
+            text-decoration: none;
+            width: $admin-sidemenu-width;
+            transition: all 300ms;
+            // z-index: 2;
+
+            & span,
+            & strong {
+                display: inline-block;
+                margin-bottom: 0;
+                transition: all 500ms; // cubic-bezier(0.2, 1, 0.22, 1);
+            }
+
+            & span {
+                background-color: $admin-sidemenu-icon-bg;
+                color: $admin-sidemenu-icon-color;
+                text-align: center;
+                width: $admin-sidemenu-icon-width;
+            }
+
+            & strong {
+                font-weight: normal;
+            }
+
+            // &:not(.has-icon) strong {
+            //     padding-left: 15px;
+            // }
+
+            & .no-icon {
+                //display: none;
+                opacity: 0;
+                width: 15px;
+            }
+
+            &:hover {
+                background-color: $admin-sidemenu-bg-hover;
+                border-top: $admin-sidemenu-border-size solid $admin-sidemenu-border-color-hover;
+                color: $admin-sidemenu-color-hover;
+
+                &+ .sidemenu-sub:not(.opened) + a,
+                &+ a {
+                    border-top: $admin-sidemenu-border-size solid $admin-sidemenu-border-color-hover;
+                }
+
+                & span {
+                    color: $admin-sidemenu-icon-color-hover;
+                    background-color: $admin-sidemenu-icon-bg-hover;
+                }
+            }
+
+            &.has-sub::after {
+                display: block;
+                font-family: 'Font Awesome 5 Free';
+                font-style: normal;
+                font-weight: 900;
+                content: "\f078";
+                float: right;
+                width: $admin-sidemenu-icon-width;
+                text-align: center;
+                transition: all 200ms;
+            }
+
+            &:focus,
+            &:active,
+            &.active,
+            &.opened {
+
+                background-color: $admin-sidemenu-bg-active;
+                border: $admin-sidemenu-border-size solid $admin-sidemenu-border-color-active;
+                color: $admin-sidemenu-color-active;
+
+                &:not(.disabled) {
+                    border-left: $admin-sidemenu-border-left-size-active solid $admin-sidemenu-border-left-color-active !important;
+                }
+
+                & span {
+                    color: $admin-sidemenu-icon-color-active;
+                    background-color: $admin-sidemenu-icon-bg-active;
+                }
+            }
+
+            &:disabled,
+            &.disabled {
+                background-color: $admin-sidemenu-bg-disabled;
+                border: $admin-sidemenu-border-size solid $admin-sidemenu-border-color-disabled;
+                color: $admin-sidemenu-color-disabled;
+                cursor: default;
+
+                & span {
+                    color: $admin-sidemenu-color-disabled;
+                }
+            }
+
+            &.opened::after {
+                transform: rotate(180deg);
+            }
+
+        }
+
+        & .sidemenu-profile {
+
+            padding: 10px 0;
+            position: relative;
+            text-align: center;
+
+            & img {
+                border-radius: 50%;
+                width: 50%;
+                margin-bottom: 10px;
+                display: none;
+            }
+
+            & a {
+                border: 0px solid #fff;
+            }
+
+        }
+
+    }

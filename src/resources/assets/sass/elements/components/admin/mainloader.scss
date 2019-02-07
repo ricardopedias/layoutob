@@ -1,0 +1,34 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+body.mainloader {
+
+    // Para ocultar a barra de rolagem
+    overflow: hidden;
+}
+
+.mainloader {
+
+    // Para envolver o painel inteiro
+    &.panel-backdrop {
+        background: $admin-mainloader-bg;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: $zindex-loader-backdrop !important;
+        opacity: 0;
+        transition: opacity $admin-mainloader-animation-delay;
+
+        &.show-loader {
+            opacity: 1;
+        }
+    }
+}

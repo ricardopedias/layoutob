@@ -1,0 +1,15 @@
+
+// --------------------------------------------------------------------------
+// helpers.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém classes css personalizadas para layout
+// --------------------------------------------------------------------------
+
+ .fix-ie-flex {
+     // Esta é uma especie de 'clearfix' que corrige o Bug do IE 11
+     // em containers flex com auto-margin
+     // Deve ser aplicado numa div vazia, colocada como último
+     // elemento dentro de um container!!
+     flex-grow: 1;
+     visibility: hidden;
+ }

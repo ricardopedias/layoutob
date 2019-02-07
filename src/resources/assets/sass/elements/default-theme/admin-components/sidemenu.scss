@@ -1,0 +1,39 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+//----------------------------------------------------------------------------------------------------------------------
+// Menu Item
+//----------------------------------------------------------------------------------------------------------------------
+$admin-sidemenu-width:                220px !default;
+$admin-sidemenu-height:               50px !default;
+// Comum
+$admin-sidemenu-border-size:        1px;
+$admin-sidemenu-color:              rgba(255,255,255,0.8) !default;
+$admin-sidemenu-bg:                 $secondary !default;
+$admin-sidemenu-border-color:       lighten($admin-sidemenu-bg, 5%) !default;
+$admin-sidemenu-icon-width:           $admin-sidemenu-height - $admin-sidemenu-height/4 !default;
+$admin-sidemenu-icon-color:           $admin-sidemenu-color !default;
+$admin-sidemenu-icon-bg:              transparent !important;
+// Hover
+$admin-sidemenu-color-hover:         #fff !default;
+$admin-sidemenu-bg-hover:            darken($admin-sidemenu-bg, 5%) !default;
+$admin-sidemenu-border-color-hover:  $admin-sidemenu-border-color !default;
+$admin-sidemenu-icon-color-hover:    $admin-sidemenu-color-hover !default;
+$admin-sidemenu-icon-bg-hover:       transparent !important;
+// Ativo
+$admin-sidemenu-color-active:         $admin-sidemenu-color-hover !default;
+$admin-sidemenu-bg-active:            $admin-sidemenu-bg-hover !default;
+$admin-sidemenu-border-color-active:  $admin-sidemenu-border-color !default;
+$admin-sidemenu-icon-color-active:    $admin-sidemenu-color-active !default;
+$admin-sidemenu-icon-bg-active:       $admin-sidemenu-bg-hover !default;
+$admin-sidemenu-border-left-size-active:        5px;
+$admin-sidemenu-border-left-color-active: $accent !default;
+// Desligado
+$admin-sidemenu-color-disabled:         rgba($admin-sidemenu-color, .5) !default;
+$admin-sidemenu-bg-disabled:            rgba($admin-sidemenu-bg, .5) !default;
+$admin-sidemenu-border-color-disabled:  rgba($admin-sidemenu-border-color, .5) !default;
+$admin-sidemenu-icon-color-disabled:    rgba($admin-sidemenu-icon-color, .5) !default;
+$admin-sidemenu-icon-bg-disabled:       transparent !default;

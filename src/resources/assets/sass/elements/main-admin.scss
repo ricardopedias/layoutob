@@ -1,0 +1,22 @@
+
+// --------------------------------------------------------------------------
+// main-admin.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contem as dependencias do painel administrativo
+// --------------------------------------------------------------------------
+
+// Tema padrão do painel
+@import "./default-theme/admin";
+
+// Web Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Ferramentas para layout
+@import "./helpers";
+
+// Componentes
+@import "./components/fontawesome/index";
+@import "./components/jquery-confirm/index";
+@import "./components/bootstrap/index";
+@import "./components/admin/index";
+@import "./components/auth/index";

@@ -1,0 +1,66 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+.mainloader {
+
+    & .loader-box-progress {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1005 !important;
+        margin: 0 auto;
+        margin-left: -25px;
+
+        width: 50px;
+        height: 40px;
+        text-align: center;
+        font-size: 10px;
+
+        & .progress-item {
+            background-color: $admin-mainloader-color-one;
+            height: 100%;
+            width: 6px;
+            display: inline-block;
+            animation: loaderBoxProgressRun 1.2s infinite ease-in-out;
+        }
+
+        & .progress-item2 {
+            background-color: $admin-mainloader-color-two;
+            animation-delay: -1.1s;
+        }
+
+        & .progress-item3 {
+            background-color: $admin-mainloader-color-three;
+            animation-delay: -1.0s;
+        }
+
+        & .progress-item4 {
+            background-color: $admin-mainloader-color-four;
+            animation-delay: -0.9s;
+        }
+
+        & .progress-item5 {
+            background-color: $admin-mainloader-color-five;
+            animation-delay: -0.8s;
+        }
+    }
+}
+
+@-webkit-keyframes loaderBoxProgressRun {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes loaderBoxProgressRun {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}

@@ -1,0 +1,251 @@
+
+// --------------------------------------------------------------------------
+// admin/topmenu.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+    .topmenu {
+
+        background-color: $admin-topmenu-bg;
+        border-bottom: $admin-topmenu-border-bottom-size solid $admin-topmenu-border-bottom-color;
+        display: flex !important;
+        justify-content: space-between !important;
+        position: fixed;
+        text-align: center;
+        width: 100%;
+        z-index: $zindex-topmenu !important;
+
+        &,
+        & > div,
+        & > a,
+        & > nav {
+            line-height: $admin-topmenu-height;
+            min-height: $admin-topmenu-height;
+        }
+
+        & .icon,
+        & .icon:visited {
+            animation-delay: 500ms;
+            background-color: $admin-topmenu-icon-bg;
+            border-left: $admin-topmenu-mobile-border-size solid $admin-topmenu-icon-border-color;
+            border-right: $admin-topmenu-mobile-border-size solid $admin-topmenu-icon-border-color;
+            color: $admin-topmenu-icon-color;
+            height: $admin-topmenu-height;
+            min-width: $admin-topmenu-height;
+            text-align: center;
+            text-decoration: none;
+            transition: all 500ms cubic-bezier(0.2, 1, 0.22, 1);
+            z-index: 1;
+
+            &.has-label {
+                 padding: 0 10px;
+            }
+
+            &:hover {
+                background-color: $admin-topmenu-icon-bg-hover;
+                border-left: $admin-topmenu-icon-border-size solid $admin-topmenu-icon-border-color-hover;
+                border-right: $admin-topmenu-icon-border-size solid $admin-topmenu-icon-border-color-hover;
+                color: $admin-topmenu-icon-color-hover;
+                z-index: 2;
+            }
+
+            &:focus,
+            &:active,
+            &.active {
+                background-color: $admin-topmenu-icon-bg-active;
+                border-left: $admin-topmenu-icon-border-size solid $admin-topmenu-icon-border-color-active;
+                border-right: $admin-topmenu-icon-border-size solid $admin-topmenu-icon-border-color-active;
+                color: $admin-topmenu-icon-color-active;
+                z-index: 2;
+            }
+
+            &.disabled {
+                background-color: $admin-topmenu-icon-bg-disabled;
+                border-left: $admin-topmenu-icon-border-size solid $admin-topmenu-icon-border-color-disabled;
+                border-right: $admin-topmenu-icon-border-size solid $admin-topmenu-icon-border-color-disabled;
+                color: $admin-topmenu-icon-color-disabled;
+                z-index: 2;
+            }
+        }
+
+        & .mobile {
+            // .icon.mobile
+            background-color: $admin-topmenu-mobile-bg;
+            border-right: $admin-topmenu-mobile-border-size solid $admin-topmenu-mobile-border-color;
+            color: $admin-topmenu-mobile-color;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $admin-topmenu-mobile-bg-hover;
+                border-right: $admin-topmenu-mobile-border-size solid $admin-topmenu-mobile-border-color-hover;
+                color: $admin-topmenu-mobile-color-hover;
+            }
+
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+
+        & .branding {
+
+            align-items: center !important;
+            display: flex !important;
+            height: $admin-topmenu-height;
+            padding: 0 5px;
+
+            @include media-breakpoint-up(lg) {
+                display: block !important;
+                width: $admin-sidemenu-width;
+                background-color: $admin-topmenu-branding-bg-sidebar-opened;
+                text-align: $admin-topmenu-branding-align-sidebar-opened;
+            }
+
+            & img {
+                display: block;
+                max-width: 100%;
+                max-height: ($admin-topmenu-height)-$admin-topmenu-branding-margim*2;
+
+                @include media-breakpoint-up(lg) {
+                    display: inline-block;
+                }
+            }
+        }
+
+        & nav {
+
+            & a {
+                display: none;
+                float: left;
+                margin: 0;
+
+                @include media-breakpoint-up(lg) {
+                    display: block;
+                }
+
+                &.profile-icon {
+                    // .icon.profile-icon
+                    background-color: $admin-topmenu-profile-bg;
+                    border-left: $admin-topmenu-profile-border-size solid $admin-topmenu-profile-border-color;
+                    border-right: $admin-topmenu-profile-border-size solid $admin-topmenu-profile-bg;
+                    color: $admin-topmenu-profile-color;
+                    display: block;
+
+                    &.active {
+                        background-color: $admin-topmenu-profile-bg-active;
+                        border-left: $admin-topmenu-profile-border-size solid $admin-topmenu-profile-border-color-active;
+                        border-right: $admin-topmenu-profile-border-size solid $admin-topmenu-profile-bg-active;
+                        border-bottom: 0px;
+                        color: $admin-topmenu-profile-color-active;
+                        z-index: $zindex-fixed;
+                    }
+
+                    &:hover {
+                        background-color: $admin-topmenu-profile-bg-hover;
+                        border-left: $admin-topmenu-profile-border-size solid $admin-topmenu-profile-border-color-hover;
+                        border-right: $admin-topmenu-profile-border-size solid $admin-topmenu-profile-border-color-hover;
+                        color: $admin-topmenu-profile-color-hover;
+
+                        &.active {
+                            background-color: $admin-topmenu-profile-bg-active;
+                            border-left: $admin-topmenu-profile-border-size solid $admin-topmenu-profile-border-color-active;
+                            border-right: $admin-topmenu-profile-border-size solid $admin-topmenu-profile-bg-active;
+                            border-bottom: 0px;
+                            color: $admin-topmenu-profile-color-active;
+                        }
+                    }
+
+                    img {
+
+                        border-radius: 50%;
+                        height: $admin-topmenu-height/$admin-topmenu-profile-prop;
+                        overflow: hidden;
+                        width: $admin-topmenu-height/$admin-topmenu-profile-prop;
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    .profile-menu {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        min-width: 200px;
+        padding-left: 0; // reset padding because ul and ol
+        position: fixed;
+        right: 0px;
+        top: $admin-topmenu-height;
+        text-align: left;
+        z-index: $zindex-sticky;
+
+        & a,
+        & a:visited {
+            line-height: $admin-topmenu-profile-menu-height;
+            margin-bottom: -$admin-topmenu-profile-menu-border-internal-size;
+            background-color: $admin-topmenu-profile-menu-bg;
+            border-top: $admin-topmenu-profile-menu-border-internal-size solid $admin-topmenu-profile-menu-border-internal-color;
+            border-bottom: $admin-topmenu-profile-menu-border-internal-size solid $admin-topmenu-profile-menu-border-internal-color;
+            border-left: $admin-topmenu-profile-menu-border-external-size solid $admin-topmenu-profile-menu-border-external-color;
+            border-right: none;
+            color: $admin-topmenu-profile-menu-color;
+            display: block;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+
+            &:first-child {
+                  @include border-top-radius($admin-topmenu-profile-menu-border-radius-top);
+                  border-top-width: 0;
+            }
+
+            &:last-child {
+                  margin-bottom: 0;
+                  @include border-bottom-radius($admin-topmenu-profile-menu-border-radius-bottom);
+                  border-bottom-width: $admin-topmenu-profile-menu-border-external-size;
+            }
+
+            &:hover {
+                background-color: $admin-topmenu-profile-menu-bg-hover;
+                border-top-color: $admin-topmenu-profile-menu-border-internal-color-hover;
+                border-bottom-color: $admin-topmenu-profile-menu-border-internal-color-hover;
+                border-left-color: $admin-topmenu-profile-menu-border-internal-color-hover;
+                border-right-color: $admin-topmenu-profile-menu-border-internal-color-hover;
+                color: $admin-topmenu-profile-menu-color-hover;
+                text-decoration: none;
+                z-index: 2;
+            }
+
+            &.disabled,
+            &:disabled {
+                  background-color: $admin-topmenu-profile-menu-bg-disabled;
+                  border-top-color: $admin-topmenu-profile-menu-border-internal-color;
+                  border-bottom-color: $admin-topmenu-profile-menu-border-internal-color;
+                  border-left-color: $admin-topmenu-profile-menu-border-external-color;
+                  color: $admin-topmenu-profile-menu-color-disabled !important;
+                  cursor: default;
+            }
+
+            &:focus,
+            &:active,
+            &.active {
+                &:not(.disabled) {
+                    background-color: $admin-topmenu-profile-menu-bg-active;
+                    border-top-color: $admin-topmenu-profile-menu-border-internal-color-active;
+                    border-bottom-color: $admin-topmenu-profile-menu-border-internal-color-active;
+                    border-left-color: $admin-topmenu-profile-menu-border-internal-color-active;
+                    border-right-color: $admin-topmenu-profile-menu-border-internal-color-active;
+                    color: $admin-topmenu-profile-menu-color-active;
+                    text-decoration: none;
+                    z-index: 3; // Place active items above their siblings for proper border styling
+                }
+            }
+
+            &.has-icon svg,
+            &.has-icon i {
+                margin-right: 10px;
+            }
+        }
+    }

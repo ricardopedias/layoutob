@@ -1,0 +1,82 @@
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:              true !default;
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+
+ // Contrastes
+ $grays: () !default;
+ // stylelint-disable-next-line scss/dollar-variable-default
+ $grays: map-merge(
+   (
+     "100": $gray-100,
+     "200": $gray-200,
+     "300": $gray-300,
+     "400": $gray-400,
+     "500": $gray-500,
+     "600": $gray-600,
+     "700": $gray-700,
+     "800": $gray-800,
+     "900": $gray-900
+   ),
+   $grays
+ );
+
+ // Cores
+ $colors: () !default;
+ // stylelint-disable-next-line scss/dollar-variable-default
+ $colors: map-merge(
+   (
+     "blue":       $blue,
+     "indigo":     $indigo,
+     "purple":     $purple,
+     "pink":       $pink,
+     "red":        $red,
+     "orange":     $orange,
+     "yellow":     $yellow,
+     "green":      $green,
+     "teal":       $teal,
+     "cyan":       $cyan,
+     "white":      $white,
+     "gray":       $gray-600,
+     "gray-dark":  $gray-800
+   ),
+   $colors
+ );
+
+ // Theme Colors
+ $theme-colors: () !default;
+ // stylelint-disable-next-line scss/dollar-variable-default
+ $theme-colors: map-merge(
+   (
+     "primary":    $primary,
+     "secondary":  $secondary,
+     "success":    $success,
+     "info":       $info,
+     "warning":    $warning,
+     "danger":     $danger,
+     "light":      $light,
+     "dark":       $dark
+   ),
+   $theme-colors
+ );
+
+ // Set a specific jump point for requesting color jumps
+ $theme-color-interval:      8% !default;
+
+ // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+ $yiq-contrasted-threshold:  150 !default;
+
+ // Customize the light and dark text colors for use in our YIQ color contrast function.
+ $yiq-text-dark:             $gray-900 !default;
+ $yiq-text-light:            $white !default;

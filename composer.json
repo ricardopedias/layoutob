@@ -1,0 +1,49 @@
+{
+    "name": "plexi/layoutob",
+    "description": "Helper para cria\u00e7\u00e3o de interfaces blade com bootstrap",
+    "keywords": [
+        "laravel",
+        "blade",
+        "layout",
+        "design",
+        "css",
+        "html",
+        "helpers"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo Pereira",
+            "email": "rpdesignerfly@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LayoutUI\\": "src/appmod"
+        },
+        "files": []
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LayoutUI\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "LayoutUI\\ServiceProvider"
+            ],
+            "aliases": {
+                "Admin": "LayoutUI\\Facades\\Admin"
+            }
+        }
+    }
+}

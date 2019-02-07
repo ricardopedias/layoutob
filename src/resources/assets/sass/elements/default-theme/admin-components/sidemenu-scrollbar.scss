@@ -1,0 +1,12 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+// scroolbar
+$admin-sidemenu-scroll-width: 5px;
+$admin-sidemenu-scroll-track: rgba(0,0,0,0.1);
+$admin-sidemenu-scroll-thumb: $accent;
+$admin-sidemenu-scroll-thumb-hover: lighten($admin-sidemenu-scroll-thumb, 10%);
+$admin-sidemenu-scroll-thumb-radius: 5px;

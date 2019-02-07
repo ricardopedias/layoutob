@@ -1,0 +1,28 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+@import "./zindex";
+
+// Configuração do layout do painel
+@import "./layout";
+
+// Configuração do componente topmenu
+@import "./topmenu";
+
+// Configuração do componente toppanel
+@import "./toppanel";
+@import "./bottompanel";
+
+// Configuração do componente sidemenu
+@import "./sidemenu";
+@import "./sidemenu-submenu";
+@import "./sidemenu-minimize";
+@import "./sidemenu-scrollbar";
+
+// Configuração do componente contextmenu
+@import "./contextmenu";
+@import "./mainloader";
+@import "./pageloader";

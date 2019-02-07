@@ -1,0 +1,32 @@
+
+// --------------------------------------------------------------------------
+// admin.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contem o tema do painel administrativo
+// --------------------------------------------------------------------------
+
+// Funções e Mixins do projeto
+@import "../../elements/functions";
+
+// As configurações básicas do tema
+@import "./theme";
+
+// Componentes do tema
+@import "../../elements/main-admin";
+
+// Qual carregador utilizar?
+// ------------
+// Cubos
+// @import "../../elements/components/admin/loader-cube"
+// @import "../../elements/components/admin/loader-cube-construct"
+// ------------
+// Blocos
+// @import "../../elements/components/admin/loader-box"
+// @import "../../elements/components/admin/loader-box-orbit"
+// @import "../../elements/components/admin/loader-box-progress"
+// ------------
+// Círculos
+@import "../../elements/components/admin/loader-circle"
+// @import "../../elements/components/admin/loader-circle-orbit"
+// @import "../../elements/components/admin/loader-circle-pulse"
+// @import "../../elements/components/admin/loader-circle-progress"

@@ -1,0 +1,25 @@
+// --------------------------------------------------------------------------
+// Bootstrap Select v1.12.4
+// Copyright (c) 2013-2017 Silvio Moreto (https://silviomoreto.github.io)
+// --------------------------------------------------------------------------
+// A biblioteca bootstrap-select utiliza a fonte glyphicon, esta é uma adaptação
+// para dar suporte ao fontawesome.
+// @see https://silviomoreto.github.io/bootstrap-select
+// @see https://github.com/silviomoreto/bootstrap-select
+// @see node_modules/bootstrap-select/sass/bootstrap-select.scss
+
+@import "~bootstrap-select/sass/bootstrap-select.scss";
+
+/* Bootstrap-select usa glyphicon glyphicon-ok check-mark*/
+.bootstrap-select .glyphicon.check-mark::before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f00c";
+}
+/* Aparencia para ajustar ao formulário */
+.bootstrap-select .btn.dropdown-toggle.btn-default.btn-secondary {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: rgb(206, 212, 218) !important;
+    color: rgb(73, 80, 87) !important;
+}

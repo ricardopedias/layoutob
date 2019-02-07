@@ -1,0 +1,87 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+    .toppanel {
+        display: block;
+        position: fixed;
+        top: $admin-topmenu-height + $admin-topmenu-border-bottom-size;
+        width: 100%;
+        background-color: $admin-toppanel-bg;
+        height: $admin-toppanel-height;
+        border-bottom: $admin-toppanel-border-bottom-size solid $admin-toppanel-border-bottom-color;
+        z-index: $zindex-content-layer;
+        padding-left: $admin-toppanel-height/2;
+        padding-right: $admin-toppanel-height/2;
+
+        & nav.top-breadcrumb {
+            //margin-left: $admin-toppanel-height;
+            line-height: $admin-toppanel-height - $admin-toppanel-border-bottom-size;
+
+            & a {
+                color: $admin-toppanel-breadcrump-color;
+                text-decoration: none;
+                line-height: $admin-toppanel-height - $admin-toppanel-border-bottom-size;
+                display: inline-block;
+
+                &:hover {
+                    color: $admin-toppanel-breadcrump-color-hover;
+                }
+
+                & + a::before {
+                    color: $admin-toppanel-breadcrump-dot-color;
+                    content: "\F111";
+                    font-family: 'Font Awesome 5 Free';
+                    font-style: normal;
+                    font-size: 4px;
+                    font-weight: 900;
+                    display: inline-block;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    position: relative;
+                    top: -4px;
+                }
+            }
+
+        }
+
+        & a.toppanel-help {
+            display: inline-block;
+            font-size: $admin-toppanel-height/2 + $admin-toppanel-height/6;
+            line-height: $admin-toppanel-height;
+            height: $admin-toppanel-height;
+            min-width: $admin-topmenu-height;
+            margin-right: -$admin-toppanel-height/2;
+            text-align: center;
+            color: $admin-toppanel-help-color;
+
+            &:hover {
+                color: $admin-toppanel-help-color-hover;
+            }
+        }
+
+        & span.toppanel-info {
+            display: inline-block;
+            line-height: $admin-toppanel-height;
+            height: $admin-toppanel-height;
+            color: $admin-toppanel-info-color;
+        }
+    }
+
+    body.sidemenu-minimized .toppanel {
+        @include media-breakpoint-up(lg) {
+            padding-left: $admin-sidemenu-minimize-width + $admin-toppanel-height;
+            margin-left: -$admin-sidemenu-minimize-width;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+
+        body:not(.sidemenu-minimized) .toppanel {
+            padding-left: $admin-sidemenu-width + $admin-toppanel-height;
+            margin-left: -$admin-sidemenu-width;
+        }
+    }

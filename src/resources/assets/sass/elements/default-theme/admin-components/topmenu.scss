@@ -1,0 +1,96 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+// Topmenu
+$admin-topmenu-bg:                   $primary !default;
+$admin-topmenu-height:               50px !default;
+$admin-topmenu-border-bottom-size:   5px !default;
+$admin-topmenu-border-bottom-color:  $accent !default;
+
+// Logotipo
+$admin-topmenu-branding-margim:         3px !default;
+$admin-topmenu-branding-bg-sidebar-opened: mix($admin-topmenu-bg, $admin-sidemenu-bg, 50%) !default;
+$admin-topmenu-branding-align-sidebar-opened: center !default;
+
+//----------------------------------------------------------------------------------------------------------------------
+// Ícones
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-topmenu-icon-border-size:        1px;
+$admin-topmenu-icon-color:              lighten($admin-topmenu-bg, 50%) !default;
+$admin-topmenu-icon-bg:                 darken($admin-topmenu-bg, 5%) !default;
+$admin-topmenu-icon-border-color:       lighten($admin-topmenu-bg, 5%) !default;
+// Hover
+$admin-topmenu-icon-color-hover:        lighten($admin-topmenu-icon-color, 20%) !default;
+$admin-topmenu-icon-bg-hover:           darken($admin-topmenu-icon-bg, 10%) !default;
+$admin-topmenu-icon-border-color-hover: darken($admin-topmenu-icon-border-color, 2%) !default;
+// Ativo
+$admin-topmenu-icon-color-active:        darken($admin-topmenu-icon-color-hover, 5%) !default;
+$admin-topmenu-icon-bg-active:           darken($admin-topmenu-icon-bg-hover, 5%) !default;
+$admin-topmenu-icon-border-color-active: darken($admin-topmenu-icon-border-color-hover, 5%) !default;
+// Desligado
+$admin-topmenu-icon-color-disabled:        rgba($admin-topmenu-icon-color, .5) !default;
+$admin-topmenu-icon-bg-disabled:           rgba($admin-topmenu-icon-bg, .5) !default;
+$admin-topmenu-icon-border-color-disabled: rgba($admin-topmenu-icon-border-color, .5) !default;
+
+//----------------------------------------------------------------------------------------------------------------------
+// Botão Perfil
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-topmenu-profile-border-size:        1px !default;
+$admin-topmenu-profile-prop:               1.6 !default;
+$admin-topmenu-profile-color:              $admin-topmenu-icon-color !default;
+$admin-topmenu-profile-bg:                 darken($admin-topmenu-bg, 10%) !default;
+$admin-topmenu-profile-border-color:       lighten($admin-topmenu-bg, 10%) !default;
+// Hover
+$admin-topmenu-profile-color-hover:        $admin-topmenu-profile-color !default;
+$admin-topmenu-profile-bg-hover:           darken($admin-topmenu-profile-bg, 10%) !default;
+$admin-topmenu-profile-border-color-hover: darken($admin-topmenu-profile-border-color, 10%) !default;
+// Ativo
+$admin-topmenu-profile-color-active:        $gray-400 !default;
+$admin-topmenu-profile-bg-active:           #fff !default;
+$admin-topmenu-profile-border-color-active: darken($admin-topmenu-profile-bg-active, 20%) !default;
+
+
+//----------------------------------------------------------------------------------------------------------------------
+// Menu Item
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-topmenu-profile-menu-height:                 50px !default;
+$admin-topmenu-profile-menu-border-radius-top:      0 !default;
+$admin-topmenu-profile-menu-border-radius-bottom:   0.25rem !default;
+$admin-topmenu-profile-menu-border-external-size:   2px !default;
+$admin-topmenu-profile-menu-border-internal-size:   1px !default;
+$admin-topmenu-profile-menu-color:                  $admin-topmenu-bg !default;
+$admin-topmenu-profile-menu-bg:                     #fff !default;
+$admin-topmenu-profile-menu-border-internal-color:  darken($admin-topmenu-profile-menu-bg, 20%) !default;
+$admin-topmenu-profile-menu-border-external-color:  darken($admin-topmenu-profile-menu-bg, 20%) !default;
+// Hover
+$admin-topmenu-profile-menu-color-hover:   $gray-800 !default;
+$admin-topmenu-profile-menu-bg-hover:      darken($admin-topmenu-profile-menu-bg, 10%) !default;
+$admin-topmenu-profile-menu-border-internal-color-hover:  darken($admin-topmenu-profile-menu-border-internal-color, 10%) !default;
+// Ativo
+$admin-topmenu-profile-menu-color-active:   $admin-topmenu-profile-menu-color-hover !default;
+$admin-topmenu-profile-menu-bg-active:      $admin-topmenu-profile-menu-bg-hover !default;
+$admin-topmenu-profile-menu-border-internal-color-active:  $admin-topmenu-profile-menu-border-internal-color-hover !default;
+// Desligado
+$admin-topmenu-profile-menu-color-disabled:   rgba($admin-topmenu-profile-menu-color, .5) !default;
+$admin-topmenu-profile-menu-bg-disabled:      $admin-topmenu-profile-menu-bg !default;
+$admin-topmenu-profile-menu-border-internal-color-disabled:  $admin-topmenu-profile-menu-border-internal-color !default;
+
+
+//----------------------------------------------------------------------------------------------------------------------
+// Botão Mobile
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-topmenu-mobile-border-size:        $admin-topmenu-icon-border-size !default;
+$admin-topmenu-mobile-color:              $admin-topmenu-icon-color !default;
+$admin-topmenu-mobile-bg:                 $admin-topmenu-icon-bg !default;
+$admin-topmenu-mobile-border-color:       $admin-topmenu-icon-border-color !default;
+// Hover
+$admin-topmenu-mobile-color-hover:        lighten($admin-topmenu-mobile-color, 20%) !default;
+$admin-topmenu-mobile-bg-hover:           darken($admin-topmenu-mobile-bg, 10%) !default;
+$admin-topmenu-mobile-border-color-hover: darken($admin-topmenu-mobile-border-color, 10%) !default;

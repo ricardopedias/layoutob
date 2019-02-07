@@ -1,0 +1,154 @@
+
+// --------------------------------------------------------------------------
+// base.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contem as configurações básicas do tema
+// --------------------------------------------------------------------------
+
+// Contrastes
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+// Cores Básicas
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+// Fundos
+$body-bg:        #fff;
+$body-color:     #212529;
+
+// Cores temáticas
+$primary:       #007bff;
+$secondary:     #6c757d;
+$accent:        $orange;
+$success:       #28a745;
+$info:          #17a2b8;
+$warning:       #ffc107;
+$danger:        #dc3545;
+$light:         #f8f9fa;
+$dark:          #343a40;
+
+//======================================================================================================================
+//
+// Admin: Barra Superior
+//
+//======================================================================================================================
+
+$admin-topmenu-bg:                   darken($primary, 40%);
+$admin-topmenu-border-bottom-color:  $primary;
+
+//----------------------------------------------------------------------------------------------------------------------
+// Ícones
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-topmenu-icon-color:              lighten($admin-topmenu-bg, 50%);
+$admin-topmenu-icon-bg:                 darken($admin-topmenu-bg, 5%);
+// Hover
+$admin-topmenu-icon-color-hover:        lighten($admin-topmenu-icon-color, 20%);
+$admin-topmenu-icon-bg-hover:           darken($admin-topmenu-icon-bg, 10%);
+// Ativo
+$admin-topmenu-icon-color-active:        darken($admin-topmenu-icon-color-hover, 5%);
+$admin-topmenu-icon-bg-active:           darken($admin-topmenu-icon-bg-hover, 5%);
+// Desligado
+$admin-topmenu-icon-color-disabled:        rgba($admin-topmenu-icon-color, .5);
+$admin-topmenu-icon-bg-disabled:           rgba($admin-topmenu-icon-bg, .5);
+
+//----------------------------------------------------------------------------------------------------------------------
+// Botão Perfil
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-topmenu-profile-color:              $admin-topmenu-icon-color;
+$admin-topmenu-profile-bg:                 darken($admin-topmenu-bg, 10%);
+// Hover
+$admin-topmenu-profile-color-hover:        $admin-topmenu-profile-color;
+$admin-topmenu-profile-bg-hover:           darken($admin-topmenu-profile-bg, 10%);
+// Ativo
+$admin-topmenu-profile-color-active:        $gray-400;
+$admin-topmenu-profile-bg-active:           #fff;
+
+//----------------------------------------------------------------------------------------------------------------------
+// Menu Item
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-topmenu-profile-menu-color:                  $admin-topmenu-bg;
+$admin-topmenu-profile-menu-bg:                     #fff;
+// Hover
+$admin-topmenu-profile-menu-color-hover:   $gray-800;
+$admin-topmenu-profile-menu-bg-hover:      darken($admin-topmenu-profile-menu-bg, 10%);
+// Ativo
+$admin-topmenu-profile-menu-color-active:   $admin-topmenu-profile-menu-color-hover;
+$admin-topmenu-profile-menu-bg-active:      $admin-topmenu-profile-menu-bg-hover;
+// Desligado
+$admin-topmenu-profile-menu-color-disabled:   rgba($admin-topmenu-profile-menu-color, .5);
+$admin-topmenu-profile-menu-bg-disabled:      $admin-topmenu-profile-menu-bg;
+
+//----------------------------------------------------------------------------------------------------------------------
+// Botão Mobile
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-topmenu-mobile-color:              $admin-topmenu-icon-color;
+$admin-topmenu-mobile-bg:                 $admin-topmenu-icon-bg;
+// Hover
+$admin-topmenu-mobile-color-hover:        lighten($admin-topmenu-mobile-color, 20%);
+$admin-topmenu-mobile-bg-hover:           darken($admin-topmenu-mobile-bg, 10%);
+
+
+//======================================================================================================================
+//
+// Admin: Barra Lateral
+//
+//======================================================================================================================
+
+// Rolagem
+$admin-sidemenu-scroll-thumb: $accent;
+
+//----------------------------------------------------------------------------------------------------------------------
+// Menu Item
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-sidemenu-color:              rgba(255,255,255,0.8);
+$admin-sidemenu-bg:                 $secondary;
+// Hover
+$admin-sidemenu-color-hover:         #fff;
+$admin-sidemenu-bg-hover:            darken($admin-sidemenu-bg, 5%);
+// Ativo
+$admin-sidemenu-color-active:         $admin-sidemenu-color-hover;
+$admin-sidemenu-bg-active:            $admin-sidemenu-bg-hover;
+$admin-sidemenu-border-left-color-active: $accent;
+// Desligado
+$admin-sidemenu-color-disabled:         rgba($admin-sidemenu-color, .5);
+$admin-sidemenu-bg-disabled:            rgba($admin-sidemenu-bg, .5);
+
+//----------------------------------------------------------------------------------------------------------------------
+// Submenu Item
+//----------------------------------------------------------------------------------------------------------------------
+// Comum
+$admin-sidemenu-sub-color:                $admin-sidemenu-color;
+$admin-sidemenu-sub-bg:                   $admin-sidemenu-bg-active;
+// Hover
+$admin-sidemenu-sub-color-hover:          #fff;
+$admin-sidemenu-sub-bg-hover:             darken($admin-sidemenu-sub-bg, 3%);
+// Ativo
+$admin-sidemenu-sub-color-active:             $admin-sidemenu-sub-color-hover;
+$admin-sidemenu-sub-bg-active:                $admin-sidemenu-sub-bg-hover;
+$admin-sidemenu-sub-border-left-color-active: $accent;
+// Desligado
+$admin-sidemenu-sub-color-disabled:         rgba($admin-sidemenu-sub-color, .5);
+$admin-sidemenu-sub-bg-disabled:            rgba($admin-sidemenu-sub-bg, .5);

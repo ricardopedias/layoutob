@@ -1,0 +1,69 @@
+
+// --------------------------------------------------------------------------
+// admin/toppanel.scss
+// Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+// Este arquivo contém a estrutura do menu do topo do painel
+// --------------------------------------------------------------------------
+
+.page-form {
+
+    & .form-alert-danger {
+
+        background-color: lighten($danger, 40%);
+
+        & .form-alert {
+            color: $danger;
+        }
+    }
+
+    & .form-alert-warning {
+
+        background-color: lighten($warning, 40%);
+
+        & .form-alert {
+            color: $orange;
+        }
+    }
+
+    & .form-alert-info {
+
+        background-color: lighten($info, 25%);
+
+        & .form-alert {
+            color: $info;
+        }
+    }
+
+    & .form-alert-success {
+
+        background-color: lighten($success, 50%);
+
+        & .form-alert {
+            color: $success;
+        }
+    }
+
+    // Área de controle superior
+    & .field-invalid {
+
+        & input,
+        & select,
+        & textarea {
+            border-color: red;
+        }
+
+        & small { color: red !important; }
+    }
+
+    & .field-valid {
+
+        & input,
+        & select,
+        & textarea {
+            border-color: green;
+        }
+
+        & small { color: green !important; }
+    }
+
+}

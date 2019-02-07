@@ -1,0 +1,16 @@
+
+// Variáveis
+// As variáveis seguem o formato `$componente-estado-propriedade-tamanho`
+// para nomeação consistente.
+// Ex: $nav-link-disabled-color e $modal-content-box-shadow-xs.
+
+// Bottomenu
+$admin-bottompanel-bg:                   $gray-200 !default;
+$admin-bottompanel-color:                darken($gray-200, 40%) !default;
+$admin-bottompanel-height:               30px !default;
+$admin-bottompanel-border-top-size:      1px !default;
+$admin-bottompanel-border-top-color:     darken($admin-bottompanel-bg, 1%) !default;
+
+//----------------------------------------------------------------------------------------------------------------------
+// Texto
+//----------------------------------------------------------------------------------------------------------------------
