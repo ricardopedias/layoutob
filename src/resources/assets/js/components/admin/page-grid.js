@@ -55,6 +55,7 @@ var PageGrid = window.PageGrid = {
 
     eventsGridControl: function()
     {
+        var self = this;
         var context = $('.page-grid-search', this.grid);
 
         $('.page-grid-search-submit', context).click(function(){
