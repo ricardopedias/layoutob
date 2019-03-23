@@ -26,6 +26,10 @@
 
         <script>
 
+            $('body header .branding').click(function(){
+                Admin.callPageUrl( $('[name="homepage"]').attr('content') );
+            });
+            
         // var url = "{{ route('admin.samples.observer-front') }}";
         //
         // Admin.callPageUrl(url, { teste: 'devel' }, function(status, obj){
